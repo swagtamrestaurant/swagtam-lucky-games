@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swagtam Lucky Chit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header>
+    <img src="swagtam-logo.png" alt="Swagtam Restaurant" class="logo"
+         onerror="this.style.display='none'">
+    <h1>SWAGTAM RESTAURANT</h1>
+    <p>🎁 Lucky Chit • Play & Win 🎁</p>
+  </header>
+
+  <section class="customer-card">
+    <h2>Enter Your Details</h2>
+    <div class="fields">
+      <label>Customer Name
+        <input id="customerName" maxlength="50" placeholder="Enter your name">
+      </label>
+      <label>Date of Visit
+        <input id="visitDate" type="date">
+      </label>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="pick">Choose ONE hidden chit</h2>
+    <p class="small">If you get “Try Again”, the unopened chits will automatically exchange places.</p>
+    <div id="chitGrid" class="grid"></div>
+  </section>
+
+  <section id="result" class="result hidden">
+    <div id="resultMessage"></div>
+    <div id="coupon" class="coupon hidden">
+      <div class="coupon-top">SWAGTAM REWARD COUPON</div>
+      <div class="coupon-number" id="couponNumber"></div>
+      <p><b>Customer:</b> <span id="outName"></span></p>
+      <p><b>Date of Visit:</b> <span id="outDate"></span></p>
+      <div class="reward" id="outReward"></div>
+      <div class="validity" id="outValidity"></div>
+      <div class="qr-wrap">
+        <div id="qr"></div>
+        <p>Show this coupon to Swagtam staff.</p>
+      </div>
+      <button id="printBtn">🖨️ Print Coupon</button>
+      <button id="shareBtn">📲 Share Coupon</button>
+    </div>
+    <button id="newBtn" class="new">🔄 New Customer</button>
+  </section>
+
+  <footer>© 2026 Swagtam Restaurant</footer>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
